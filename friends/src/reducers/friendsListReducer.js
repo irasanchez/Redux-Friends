@@ -1,4 +1,4 @@
-//import actions
+import { FETCHING, SUCCESS, FAILURE } from "../actions";
 
 const initialState = {
   fetchingFriends: false,
