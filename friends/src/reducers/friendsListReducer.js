@@ -14,5 +14,29 @@ const initialState = {
 };
 
 export const friendsListReducer = (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case FETCHING:
+      return {
+        ...state,
+        friends: [],
+        error: "",
+        fetchingFriends: true
+      };
+    case SUCCESS:
+      return {
+        ...state,
+        fetchingFriends: false,
+        friendsFetched: true,
+        friends: action.payload,
+        error: ""
+      };
+    case FAILURE:
+      return {
+        ...state,
+        fetchingFriends: false,
+        friendsFetched: false,
+        friends: [],
+        error: action.payload
+      };
+  }
 };
