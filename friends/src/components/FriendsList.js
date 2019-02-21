@@ -2,7 +2,7 @@ import React from "react";
 
 import Friend from "./Friend";
 
-const FriendList = props => {
+const FriendsList = props => {
   return (
     <ul>
       {props.friends.map(friend => {
@@ -12,4 +12,4 @@ const FriendList = props => {
   );
 };
 
-export default FriendList;
+export default FriendsList;

@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { FriendList } from "./../components";
+import { FriendsList } from "./../components";
 import { getFriends } from "../actions";
 
-class FriendListView extends React.Component {
+class FriendsListView extends React.Component {
   constructor() {
     super();
   }
