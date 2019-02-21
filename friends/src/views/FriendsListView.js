@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { FriendsList } from "./../components";
+import { FriendsList } from "../components";
 import { getFriends } from "../actions";
 
 class FriendsListView extends React.Component {
@@ -15,7 +15,7 @@ class FriendsListView extends React.Component {
 
   render() {
     if (this.props.fetchingFriends) {
-      <h2>Getting some friends</h2>;
+      return <h2>Getting some friends</h2>;
     }
     return (
       <div className="FriendsList_wrapper">

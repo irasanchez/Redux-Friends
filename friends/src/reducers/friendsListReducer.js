@@ -38,5 +38,7 @@ export const friendsListReducer = (state = initialState, action) => {
         friends: [],
         error: action.payload
       };
+    default:
+      return state;
   }
 };
