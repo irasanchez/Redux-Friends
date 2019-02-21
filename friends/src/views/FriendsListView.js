@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 
-//import actions
+import { FriendList } from "./../components";
+import { getFriends } from "../actions";
 
 class FriendListView extends React.Component {
   constructor() {
@@ -9,11 +10,13 @@ class FriendListView extends React.Component {
   }
 
   componentDidMount() {
-    //call fetching action this.props.getFriends();
+    this.props.getFriends();
   }
 
   render() {
-    //if fetching show loading
+    if (this.props.fetchingFriends) {
+      <h2>Getting some friends );</h2>;
+    }
     return (
       <div className="FriendsList_wrapper">
         <FriendsList friends={this.props.friends} />
@@ -34,7 +37,5 @@ const mstp = state => {
 
 export default connect(
   mstp,
-  {
-    // getFriends
-  }
+  { getFriends }
 )(FriendsListView);
