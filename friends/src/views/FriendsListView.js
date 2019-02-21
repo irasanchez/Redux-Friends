@@ -14,6 +14,7 @@ class FriendsListView extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     if (this.props.fetchingFriends) {
       return <h2>Getting some friends</h2>;
     }

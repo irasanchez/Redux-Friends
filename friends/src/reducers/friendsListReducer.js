@@ -14,6 +14,7 @@ const initialState = {
 };
 
 export const friendsListReducer = (state = initialState, action) => {
+  console.log(action);
   switch (action.type) {
     case FETCHING:
       return {
