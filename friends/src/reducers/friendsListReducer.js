@@ -27,7 +27,7 @@ export const friendsListReducer = (state = initialState, action) => {
         ...state,
         fetchingFriends: false,
         friendsFetched: true,
-        friends: action.payload,
+        friends: [...state.friends, ...action.payload],
         error: ""
       };
     case FAILURE:
