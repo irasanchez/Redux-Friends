@@ -6,17 +6,17 @@ export const SUCCESS = "SUCCESS";
 export const getFriends = () => dispatch => {
   dispatch({ type: FETCHING });
   axios
-    .get('http://localhost:5000/api/friends')
-    .then(({data}) => {
+    .get("http://localhost:5000/api/friends")
+    .then(({ data }) => {
       dispatch({
-        type:SUCCESS, 
+        type: SUCCESS,
         payload: data.results
-      })
+      });
+    })
     .catch(error => {
       dispatch({
-        type: FAILURE, 
+        type: FAILURE,
         payload: error
       });
     });
-    }
 };
