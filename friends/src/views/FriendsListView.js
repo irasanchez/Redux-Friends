@@ -15,7 +15,7 @@ class FriendsListView extends React.Component {
 
   render() {
     if (this.props.fetchingFriends) {
-      <h2>Getting some friends );</h2>;
+      <h2>Getting some friends</h2>;
     }
     return (
       <div className="FriendsList_wrapper">
